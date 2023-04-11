@@ -12,9 +12,13 @@ public class Aplikace extends JFrame {
     private JLabel jmenoLabel;
     private JLabel prijmeniLabel;
     private JLabel adresaLabel;
+    private JLabel emailLabel;
+    private JLabel telefonLabel;
     private JTextField jmenoField;
     private JTextField prijmeniField;
     private JTextField adresaField;
+    private JTextField emailField;
+    private JTextField telefonField;
 
     private JCheckBox pracovniCheckbox;
 
@@ -65,7 +69,28 @@ public class Aplikace extends JFrame {
         add(adresaLabel);
         add(adresaField, "span");
 
+
+
+        emailField = new JTextField();
+        emailLabel = new JLabel("E-mail");
+        emailLabel.setDisplayedMnemonic('E');
+        emailLabel.setLabelFor(emailField);
+        add(emailLabel);
+        add(emailField);
+
+
+
+        telefonField = new JTextField();
+        telefonLabel =new JLabel("Telefon");
+        telefonLabel.setDisplayedMnemonic('T');
+        telefonLabel.setLabelFor(telefonField);
+        add(telefonLabel);
+        add(telefonField);
+
+
+
         add(createGenderPanel(), "left, span 2");
+
 
         pracovniCheckbox = new JCheckBox("Pracovní kontakt");
         pracovniCheckbox.setMnemonic('r');
