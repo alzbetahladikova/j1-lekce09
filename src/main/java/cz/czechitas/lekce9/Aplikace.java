@@ -103,6 +103,7 @@ public class Aplikace extends JFrame {
         getRootPane().setDefaultButton(ulozitButton);
 
         ulozitButton.addActionListener(this::handleUlozit);
+        smazatButton.addActionListener(this::handleSmazat);
     }
 
     private JPanel createGenderPanel() {
@@ -152,4 +153,7 @@ public class Aplikace extends JFrame {
     }
 
 
+    private void handleSmazat(ActionEvent actionEvent){
+        System.out.println("Mažu kontakt");
+    }
 }
